@@ -17,34 +17,36 @@
  }
 
  .header {
+     display: flex;
      font-size: 25px;
      position: sticky;
-     position: relative;
      top: 0;
      z-index: 99;
-     display: flex;
      margin-bottom: 100px;
+     box-sizing: border-box;
+     justify-content: space-between;
+     align-items: center;
+     flex-wrap: wrap;
+
      /*    margin: -100;*/
      /*    background-image: url(images/backgroung.jpg)*/
  }
 
  .links {
-     position: absolute;
-     right: 0;
-     margin-top: auto;
-     margin-bottom: auto;
-     padding: 20px;
-     width: 70%;
+     display: flex;
+     justify-content: flex-start;
+     align-items: flex-start;
+     flex-wrap: wrap;
+
  }
 
  .link {
-     padding-right: 100px;
-     /*    margin: auto auto;*/
+     padding: 20px;
  }
 
  .title {
+     display: flex;
      font-size: 40px;
-     width: 20%;
      font-family: Pacifico;
  }
 
