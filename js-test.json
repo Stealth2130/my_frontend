@@ -1,0 +1,31 @@
+const menuToggle = document.querySelector(".menu-toggle");
+const menu = document.querySelector(".menu");
+
+menuToggle.addEventListener("click", function () {
+  if (menu.classList.contains("active")) {
+    menu.classList.remove("active");
+  } else {
+    menu.classList.add("active");
+  }
+});
+
+// тех-поддержка
+const techServiceBtn = document.querySelector(".tech-service-btn");
+const techServiceDialog = document.querySelector(".tech-service-dialog");
+const sendBtn = document.querySelector(".chat-send-btn");
+const input = document.querySelector(".chat-input");
+
+techServiceBtn.addEventListener("click", function (e) {
+  e.preventDefault();
+  techServiceDialog.classList.toggle("show");
+  sendBtn.disabled = false;
+  sendBtn.textContent = "Отправить";
+  input.value = "";
+});
+
+sendBtn.addEventListener("click", function (e) {
+  e.preventDefault();
+  this.textContent = "Отправлено";
+  this.disabled = true;
+  input.value = "";
+});

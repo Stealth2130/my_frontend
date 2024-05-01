@@ -1,93 +1,119 @@
- @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz@0,8..144;1,8..144&display=swap');
 
- html {
-     font-family: serif;
-     background-image: url(images/backgroung.jpg);
-     background-repeat: no-repeat;
-     background-position: center center;
-     background-attachment: fixed;
-     /*
+html {
+    font-family: sans-serif;
+    background-image: url(images/backgroung.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    /*
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
 */
-     background-size: cover;
-     color: whitesmoke;
-     margin: 50px
- }
+    background-size: cover;
+    color: whitesmoke;
+    margin: 50px
+}
 
- .header {
-     display: flex;
-     font-size: 25px;
-     position: sticky;
-     top: 0;
-     z-index: 99;
-     margin-bottom: 100px;
-     box-sizing: border-box;
-     justify-content: space-between;
-     align-items: center;
-     flex-wrap: wrap;
-
-     /*    margin: -100;*/
-     /*    background-image: url(images/backgroung.jpg)*/
- }
-
- .links {
-     display: flex;
-     justify-content: flex-start;
-     align-items: flex-start;
-     flex-wrap: wrap;
-
- }
-
- .link {
-     padding: 20px;
- }
-
- .title {
-     display: flex;
-     font-size: 40px;
-     font-family: Pacifico;
- }
-
- a:visited {
-     color: #97B7BA
- }
-
- a:link {
-     color: #97B7BA
- }
-
- main {
-     display: flex;
-     position: relative;
- }
-
- .text {
-     /*    position: relative;*/
-     text-align: left;
-     width: 50%;
-     font-size: 15px;
- }
-
- #main_photo {
-     position: absolute;
-     right: 0;
-     padding-right: 30px;
-     text-align: right;
-     border-radius: 1000px;
- }
-
- .link:hover {
-     color: aqua
- }
-
- /*
- h2::before {
-     content: "\128293";
-     padding-right: 5px;
-     font-size: 15px;
- }
+.header {
+    display: flex;
+    font-size: 25px;
+/*
+    position: sticky;
+    top: 0;
+    z-index: 99;
+    margin: -58px;
 */
+    padding: 0px 70px;
+    margin-bottom: 20px;
+    box-sizing: content-box;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    /*     background-color: black;*/
 
- footer {}
+    /*    margin: -100;*/
+    /*    background-image: url(images/backgroung.jpg)*/
+}
+
+.links {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-grow: 1;
+    padding: 20px;
+}
+
+.title {
+    display: flex;
+    font-size: 35px;
+    font-family: "Roboto Serif";
+    font-style: italic;
+    flex-grow: 1;
+    justify-content: flex-start;
+    text-align: center;
+}
+
+a:visited {
+    color: #97B7BA
+}
+
+a:link {
+    color: #97B7BA
+}
+
+.main {
+    display: grid;
+    grid-template-columns: 50vw 50vw;
+    grid-template-rows: auto
+}
+
+.main__text {
+    box-sizing: border-box;
+    /*    position: relative;*/
+    text-align: left;
+    font-size: 15px;
+    grid-column: 1;
+    max-width: 70vw;
+}
+
+.main__photo {
+    justify-self: center;
+    padding-right: 80px;
+    padding-bottom: 20px;
+    max-width: 400px;
+    grid-column: 2;
+    border-radius: 10px;
+    max-height: 500px;
+    object-fit: cover;
+}
+
+/*@media (min-width: 375px) {
+    .main_photo {
+        width: 320px;
+        height: 400px;
+    }
+    .main_text {
+        font-size: 10px;
+    }
+}*/
+    
+    
+.link:hover {
+    color: aqua
+}
+
+
+
+footer {
+    display: flex;
+    flex-direction: column;
+    /*     justify-content: center;*/
+    align-items: center;
+}
+
+.contacts img {
+    margin-right: 20px;
+    color: white;
+}
