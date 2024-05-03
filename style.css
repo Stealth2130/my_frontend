@@ -2,7 +2,6 @@
 
 html {
     font-family: "Montserrat";
-    color: #03B2A5;
 }
 
 header {
@@ -13,16 +12,21 @@ header {
 }
 
 .header__menu {
-display: flex;
-    justify-content: space-around; 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
     font-size: 14px;
+    font-weight: 500;
 }
 
 .header__menu ul {
     list-style: none;
     display: flex;
     justify-content: space-around;
-    margin: 30px;
+}
+
+.header__menu li {
+    padding: 30px
 }
 
 .header__menu li a {
@@ -57,8 +61,76 @@ display: flex;
     .hamburger-menu {
         display: block;
     }
-    
+
     .header__menu {
         display: none;
     }
+}
+
+/*Настройка для шапки и секций*/
+.main__menu {
+    display: inline-flex;
+    color: #333333;
+    font-size: 12px;
+}
+
+.main__menu p {
+    padding-left: 1em;
+}
+
+h1 {
+    font-size: 48;
+    font-weight: bold;
+}
+
+.main__tags ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    list-style: none;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 0px;
+    column-gap: 8px;
+    text-align: center;
+    line-height:
+        /*
+    overflow-x: auto;
+  overflow-y: hidden;
+*/
+}
+
+.main__tags ul li {
+    display: flex;
+    align-items: center;
+    border: 1px solid #C1C5CD;
+    border-radius: 24px;
+    padding: 6px 8px;
+}
+
+/*Настройка для статьи*/
+
+.article img {
+    position: relative;
+    height: 260px;
+    object-fit: cover;
+    border-top-right-radius: 30px;
+    border-top-left-radius: 30px;
+}
+
+.article__tags ul {
+    position: absolute;
+    z-index: 3;
+    left: 0;
+    
+}
+
+.article__tags li {
+    list-style: none;
+    border: 1px solid #C1C5CD;
+    background-color: rgba(255,255,255,0.5);
+    border-radius: 24px;
+    padding: 6px 8px;
+    font-size: 14px;
+    font-weight: 600;
 }
