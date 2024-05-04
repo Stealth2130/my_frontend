@@ -1,20 +1,32 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 html {
+    margin: 0 auto;
+    /*    background-color: #EFF5FB;*/
+    max-width: 1440px;
+}
+
+body {
+    margin: 120px;
     font-family: "Montserrat";
+    font-size: 14px;
+}
+
+img {
+    display: block;
+    max-width: 100%;
 }
 
 header {
     position: relative;
     display: flex;
     align-items: center;
-    margin: auto 120px;
+    padding: 30px 0;
 }
 
 .header__menu {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
     font-size: 14px;
     font-weight: 500;
 }
@@ -22,11 +34,10 @@ header {
 .header__menu ul {
     list-style: none;
     display: flex;
-    justify-content: space-around;
 }
 
 .header__menu li {
-    padding: 30px
+    padding: 0 15px
 }
 
 .header__menu li a {
@@ -45,11 +56,11 @@ header {
     border: none;
 }
 
-.hamburger-menu {
+.header__hamburger_menu {
     display: none;
 }
 
-.hamburger {
+.header__hamburger_menu-line {
     width: 30px;
     height: 3px;
     background-color: white;
@@ -58,7 +69,7 @@ header {
 
 /*Медиа запрос для мобильные устройств*/
 @media (max-width: 768px) {
-    .hamburger-menu {
+    .header__hamburger-menu {
         display: block;
     }
 
@@ -68,22 +79,33 @@ header {
 }
 
 /*Настройка для шапки и секций*/
-.main__menu {
+.menu {
     display: inline-flex;
     color: #333333;
     font-size: 12px;
 }
 
-.main__menu p {
+.menu p {
     padding-left: 1em;
 }
 
 h1 {
-    font-size: 48;
+    font-size: 48px;
     font-weight: bold;
 }
 
-.main__tags ul {
+h2 {
+    font-weight: bold;
+    font-size: 18px;
+    margin: 0;
+}
+
+.author {
+    font-size: 12px;
+    margin-top: 4px;
+}
+
+.tags ul {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -100,37 +122,209 @@ h1 {
 */
 }
 
-.main__tags ul li {
+.tags ul li {
     display: flex;
     align-items: center;
     border: 1px solid #C1C5CD;
+
     border-radius: 24px;
     padding: 6px 8px;
 }
 
 /*Настройка для статьи*/
 
-.article img {
+/*
+.articles {
+    padding: 24px 0;
+}
+*/
+
+.articles__section-one {
+    display: flex;
+    column-gap: 24px;
+}
+
+.articles__section-two {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 24px;
+}
+
+.section-one__article {
+    box-sizing: border-box;
     position: relative;
+    border: 1px solid #DEDEDE;
+    width: 588px;
+    height: 499px;
+    border-radius: 30px;
+    box-sizing: border-box;
+    background-color: #FFFFFF;
+    margin-bottom: 24px;
+}
+
+.section-two__article {
+    box-sizing: border-box;
+    position: relative;
+    border: 1px solid #DEDEDE;
+    width: 384px;
+    height: 475px;
+    border-radius: 30px;
+    box-sizing: border-box;
+    background-color: #FFFFFF;
+    margin-bottom: 24px;
+}
+
+.article__picture {
     height: 260px;
+    width: 100%;
     object-fit: cover;
+    object-position: bottom;
     border-top-right-radius: 30px;
     border-top-left-radius: 30px;
 }
 
-.article__tags ul {
+.article__tags {
+    display: inline-flex;
+    flex-direction: column;
     position: absolute;
     z-index: 3;
-    left: 0;
-    
+    padding: 8px;
+    margin: 0;
 }
 
-.article__tags li {
-    list-style: none;
+.article__tags div {
+    display: inline-flex;
     border: 1px solid #C1C5CD;
-    background-color: rgba(255,255,255,0.5);
+    background-color: rgba(255, 255, 255, 0.5);
     border-radius: 24px;
     padding: 6px 8px;
     font-size: 14px;
     font-weight: 600;
+}
+
+/*
+.article__tags ul {
+    display: inline-flex;
+    flex-direction: column;
+    position: absolute;
+    z-index: 3;
+    padding: 8px;
+    margin: 0;
+}
+
+.article__tags ul li {
+    display: inline-flex;
+    display: inline-block;
+    list-style: none;
+    border: 1px solid #C1C5CD;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 24px;
+    padding: 6px 8px;
+    font-size: 14px;
+    font-weight: 600;
+
+}*/
+
+.smile {
+    height: 1rem;
+    width: 1rem;
+    padding-right: 5px;
+}
+
+.article__text {
+    padding: 16px;
+}
+
+.date {
+    position: absolute;
+    bottom: 16px;
+    left: 16px;
+    font-size: 12px;
+}
+
+.button-else button {
+    background-color: #35B3A9;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    width: 182px;
+    padding: 12px;
+}
+
+.button-else {
+    width: 182px;
+    margin: 56px auto;
+}
+
+/*Стили для подвала*/
+
+footer {
+    background-color: #2963A3;
+    padding: 40px 120px 17px;
+    margin: 0 -120px;
+}
+
+.footer__section-one {
+    display: flex;
+}
+
+.footer__menu ul {
+    columns: auto 2;
+    column-gap: 93px;
+    list-style: none;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 0;
+}
+
+.footer__menu li {
+    padding: 8px 0;
+}
+
+.footer__menu li a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer__subscription {
+    width: 486px;
+}
+
+.footer__subscription-text {
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.footer__subscription-personal {
+    color: rgba(255, 255, 255, 0.7)
+}
+
+.footer__icons {
+    display: block;
+
+}
+
+.footer__icons-sk {
+    width: 221px;
+    height: 150px;
+}
+
+.footer__icons-social {
+    display: flex;
+    flex-direction: row;
+    column-gap: 16px;
+}
+
+.footer__icons-social img {
+    width: 30px;
+    height: 30px;
+}
+
+.footer__section-two {
+    display: inline-flex;
+    column-gap: 48px;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.7)
 }
