@@ -7,7 +7,7 @@ html {
 }
 
 body {
-    margin: 120px;
+    margin: 0 120px;
     font-family: "Montserrat";
     font-size: 14px;
 }
@@ -36,7 +36,7 @@ header {
     display: flex;
 }
 
-.header__menu li {
+.header__menu ul li {
     padding: 0 15px
 }
 
@@ -98,6 +98,17 @@ h2 {
     font-weight: bold;
     font-size: 18px;
     margin: 0;
+}
+
+h3 {
+    font-size: 24px;
+    font-weight: bold;
+
+}
+
+h4 {
+    font-size: 16px;
+    font-weight: bold;
 }
 
 .author {
@@ -183,18 +194,21 @@ h2 {
     border-top-left-radius: 30px;
 }
 
-.article__tags {
+.article__tags ul {
     display: inline-flex;
     flex-direction: column;
+    flex-wrap: nowrap;
     position: absolute;
     z-index: 3;
     padding: 8px;
     margin: 0;
+    list-style: none;
 }
 
-.article__tags div {
+.article__tag {
     display: inline-flex;
-    border: 1px solid #C1C5CD;
+    flex-wrap: nowrap;
+    outline: 1px solid #C1C5CD;
     background-color: rgba(255, 255, 255, 0.5);
     border-radius: 24px;
     padding: 6px 8px;
@@ -314,7 +328,7 @@ footer {
     flex-grow: 1;
     /* Поле занимает всё доступное пространство */
     border: none;
-    outline: none; 
+    outline: none;
     /* Очертание при фокусе отсутствует */
     padding: 14px 16px;
 }
@@ -370,3 +384,72 @@ footer {
     font-size: 14px;
     color: rgba(255, 255, 255, 0.7)
 }
+
+
+/*Стили для второй страницы - можно вынести в отдельный файл*/
+
+.fears__main {
+    display: grid;
+    grid-template-columns: 1fr 282px;
+    grid-template-rows: 1em 1fr 1fr;
+}
+
+#fears__main_article p {
+    line-height: 24px;
+}
+
+#fears__main_article li {
+    line-height: 24px;
+}
+
+#fears__main_article {
+    margin-right: 228px;
+    grid-column: 1;
+    grid-row: 2;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+#fears__aside-right {
+    grid-column: 2;
+    grid-row: 2;
+     font-size: 14px;
+}
+
+#fears__aside-bottom {
+    grid-column: 1 / 3;
+    grid-row: 3;
+}
+
+#fears__main_photo {
+    width: 100%;
+    max-height: 331px;
+    object-fit: cover;
+    object-position: ;
+
+}
+
+.content li {
+    color: #03B2A5;
+}
+
+.content span {
+    color: black;
+    text-decoration: underline;
+}
+
+#subhead li {
+    list-style: none;
+}
+
+#subhead {
+    list-style: none;
+}
+
+.blockquote {
+    background-color: #F3F7FE;
+    width: 100%;
+}
+
+
+#part_one {}
