@@ -45,6 +45,8 @@ header {
     text-decoration: none;
 }
 
+
+
 .header__button {
     position: absolute;
     right: 0;
@@ -103,12 +105,13 @@ h2 {
 h3 {
     font-size: 24px;
     font-weight: bold;
-
+    margin: 0;
 }
 
 h4 {
     font-size: 16px;
     font-weight: bold;
+    margin: 0;
 }
 
 .author {
@@ -391,18 +394,36 @@ footer {
 .fears__main {
     display: grid;
     grid-template-columns: 1fr 282px;
-    grid-template-rows: 1em 1fr 1fr;
+    grid-template-rows: 1em auto auto;
 }
 
-#fears__main_article p {
+#fears__main-article p {
     line-height: 24px;
+    padding: 12px 0;
+    margin: 0
 }
 
-#fears__main_article li {
+#fears__main-article div {
     line-height: 24px;
+    padding: 12px 0;
+    margin: 0
 }
 
-#fears__main_article {
+#fears__main-article section {
+    padding: 12px 0;
+    margin: 0
+}
+
+#fears__main-article li {
+    line-height: 24px;
+    color: #03B2A5;
+}
+
+#fears__main-article span {
+    color: black;
+}
+
+#fears__main-article {
     margin-right: 228px;
     grid-column: 1;
     grid-row: 2;
@@ -413,12 +434,13 @@ footer {
 #fears__aside-right {
     grid-column: 2;
     grid-row: 2;
-     font-size: 14px;
+    font-size: 14px;
 }
 
 #fears__aside-bottom {
     grid-column: 1 / 3;
     grid-row: 3;
+    max-height: 500px;
 }
 
 #fears__main_photo {
@@ -429,15 +451,6 @@ footer {
 
 }
 
-.content li {
-    color: #03B2A5;
-}
-
-.content span {
-    color: black;
-    text-decoration: underline;
-}
-
 #subhead li {
     list-style: none;
 }
@@ -446,10 +459,294 @@ footer {
     list-style: none;
 }
 
-.blockquote {
+.quote {
     background-color: #F3F7FE;
     width: 100%;
+    position: relative;
+    border-radius: 16px;
+    margin-top: 40px;
+}
+
+.quote::before {
+    content: "“";
+    position: absolute;
+    left: 20px;
+    color: rgba(0, 0, 0, 0.06);
+    font-size: 120px
+}
+
+.quote blockquote {
+    padding: 34px 24px 24px;
+    margin: 0;
+}
+
+.quote p {
+    margin: 0
+}
+
+.quote p:nth-child(2) {
+    padding-top: 8px;
+}
+
+.fears__photo_two {
+    margin: 0;
+}
+
+.fears__photo_two figcaption {
+    color: #868686;
+    padding-top: 16px;
+    font-size: 14px;
+    font-weight: 400;
 }
 
 
-#part_one {}
+.fears__text-in-vector {
+    position: relative;
+    padding: 0;
+}
+
+.fears__text-in-vector p {
+    position: relative;
+    text-align: center;
+    padding: 24px 102px 48px !important;
+    z-index: 3;
+}
+
+.fears__text-in-vector img {
+    position: absolute;
+    top: 0;
+    left: 225px;
+}
+
+#fears__photo_tree {
+    display: flex;
+    column-gap: 24px
+}
+
+.exersice {
+    background-color: #FEFAEC;
+    padding: 24px 24px 12px !important;
+    border-radius: 16px;
+}
+
+.exersice.two {
+    background-color: #FFF3EB !important;
+}
+
+.exersice.tree {
+    background-color: rgba(3, 178, 165, 0.1) !important;
+}
+
+.fears__two-colums {
+    column-count: 2;
+}
+
+#fears__line {
+    margin: auto;
+}
+
+.fears__tags ul {
+    display: flex;
+    font-size: 14px;
+    font-weight: 400;
+    flex-wrap: wrap;
+    column-gap: 8px;
+    list-style: none;
+}
+
+.fears__tags a {
+    text-decoration: none;
+    color: #2963A3;
+}
+
+#fears__aside-bottom article {
+    display: flex;
+    padding: 72px 0 108px;
+    position: relative;
+    margin-right: 0;
+}
+
+#fears__aside-bottom div {
+    margin: 0;
+    width: 348px;
+}
+
+#fears__aside-bottom div {
+    margin: 0;
+    width: 348px;
+    margin-right: 303px;
+}
+
+#vector_red_circle {
+    position: absolute;
+    right: 0;
+    margin-right: -120px;
+}
+
+.btn {
+    background-color: #16C8BB;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    padding: 20px 24px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+
+#part_one {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    background-color: #E6F0FD;
+    text-align: center;
+    justify-content: space-between;
+    height: 512px;
+    padding: 24px;
+    border-radius: 16px;
+}
+
+#part_one p:nth-child(2) {
+    font-size: 18px;
+    font-weight: bold;
+    padding: 0;
+}
+
+#part_two {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid #DEDEDE;
+    border-radius: 16px;
+    margin: 25px 0;
+    padding: 24px 16px 36px;
+    height: 481px;
+}
+
+
+#part_two hr {
+    width: 100%;
+}
+
+.profile p {
+    text-align: center;
+    margin: 0;
+}
+
+#name {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#prof {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+#experience {
+    font-size: 14px;
+    font-weight: 500;
+    color: #A2A7B1;
+}
+
+#part_two section ul {
+    margin: 0;
+    padding: 0;
+}
+
+#part_two section li {
+    padding-left: 16px;
+    margin: 4px 0;
+    list-style: none;
+    position: relative;
+}
+
+#part_two section li:before {
+    position: absolute;
+    content: "\02D9";
+    font-size: 3rem;
+    left: 0;
+    top: -7px;
+    color: #03B2A5;
+}
+
+
+#part_two img {
+    border-radius: 100%;
+    margin: 24px auto 16px;
+}
+
+.part_two__tags span {
+    background-color: rgba(243, 244, 248, 0.7);
+    border-radius: 4px;
+    display: inline-flex;
+    flex-wrap: nowrap;
+
+}
+
+.part_two__tags ul {
+    list-style: none;
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    display: inline-flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    grid-gap: 8px;
+}
+
+#part_tree {
+    background-image: url(images/gifts.png);
+    background-size: contain;
+    width: 282px;
+    height: 292px;
+    color: white;
+    font-size: 32px;
+    position: relative;
+}
+
+#part_tree p {
+    position: absolute;
+    margin: 60px 25px;
+    text-align: center;
+    max-width: 234px;
+}
+
+#part_four {
+    box-sizing: border-box;
+    margin-top: 24px;
+    padding: 32px;
+    height: 304px;
+    width: 282px;
+    border: 1px solid #DEDEDE;
+    border-radius: 24px;
+    position: relative;
+}
+
+#part_four img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+#part_four__h {
+    color: #2963A3;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#part_four__p {
+    font-size: 14px;
+    margin: 16px 0;
+    width: 196px;
+}
+
+#part_four__price {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 16px 0;
+}
+
+
+
