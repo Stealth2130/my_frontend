@@ -14,6 +14,7 @@ body {
 img {
     display: block;
     max-width: 100%;
+    object-fit: contain;
 }
 
 header {
@@ -179,6 +180,7 @@ h4 {
     object-position: bottom;
     border-top-right-radius: 30px;
     border-top-left-radius: 30px;
+        height: 260px;
 }
 
 .article__tags ul {
@@ -473,16 +475,14 @@ footer {
     left: 25%;
 }
 
-#fears__photo-tree {
+#fears__photo-tree, #fears__photo-four {
     display: flex;
     column-gap: 24px
 }
 
 #fears__photo-tree img {
     height: 380px;
-    object-fit: cover;
 }
-
 
 .exersice {
     background-color: #FEFAEC;
@@ -573,7 +573,7 @@ footer {
     grid-gap: 26px;
 }
 
-#part_one {
+#fears__aside-right_part_one {
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
@@ -585,14 +585,14 @@ footer {
     border-radius: 16px;
 }
 
-#part_one p:nth-child(2) {
+#fears__aside-right_part_one p:nth-child(2) {
     font-size: 18px;
     font-weight: bold;
     padding: 0;
     margin: 0;
 }
 
-#part_two {
+#fears__aside-right_part_two {
     box-sizing: border-box;
     position: relative;
     display: flex;
@@ -605,7 +605,7 @@ footer {
 }
 
 
-#part_two hr {
+#fears__aside-right_part_two hr {
     width: 100%;
 }
 
@@ -630,19 +630,19 @@ footer {
     color: #A2A7B1;
 }
 
-#part_two section ul {
+#fears__aside-right_part_two section ul {
     margin: 0;
     padding: 0;
 }
 
-#part_two section li {
+#fears__aside-right_part_two section li {
     padding-left: 16px;
     margin: 4px 0;
     list-style: none;
     position: relative;
 }
 
-#part_two section li:before {
+#fears__aside-right_part_two section li:before {
     position: absolute;
     content: "\02D9";
     font-size: 3rem;
@@ -652,12 +652,12 @@ footer {
 }
 
 
-#part_two img {
+#fears__aside-right_part_two img {
     border-radius: 100%;
     margin: 24px auto 16px;
 }
 
-.part_two__tags span {
+.fears__aside-right_part_two_tags span {
     background-color: rgba(243, 244, 248, 0.7);
     border-radius: 4px;
     display: inline-flex;
@@ -665,7 +665,7 @@ footer {
 
 }
 
-.part_two__tags ul {
+.fears__aside-right_part_two_tags ul {
     list-style: none;
     position: absolute;
     top: 16px;
@@ -676,7 +676,7 @@ footer {
     grid-gap: 8px;
 }
 
-#part_tree {
+#fears__aside-right_part_tree {
     background-image: url(images/gifts.png);
     background-size: cover;
     background-position: center;
@@ -690,12 +690,12 @@ footer {
     border-radius: 16px;
 }
 
-#part_tree p {
+#fears__aside-right_part_tree p {
     position: absolute;
     top: 60px max-width: 234px;
 }
 
-#part_four {
+#fears__aside-right_part_four {
     box-sizing: border-box;
     padding: 32px;
     height: 304px;
@@ -704,25 +704,25 @@ footer {
     position: relative;
 }
 
-#part_four img {
+#fears__aside-right_part_four img {
     position: absolute;
     bottom: 0;
     right: 0;
 }
 
-#part_four__h {
+#fears__aside-right_part_four__h {
     color: #2963A3;
     font-size: 18px;
     font-weight: bold;
 }
 
-#part_four__p {
+#fears__aside-right_part_four__p {
     font-size: 14px;
     margin: 16px 0;
     width: 75%;
 }
 
-#part_four__price {
+#fears__aside-right_part_four__price {
     font-size: 24px;
     font-weight: bold;
     margin: 16px 0;
@@ -797,18 +797,18 @@ footer {
 
 
 
-    #part_two,
-    #part_one {
+    #fears__aside-right_part_two,
+    #fears__aside-right_part_one {
         height: 471px;
         padding-bottom: 14px;
     }
 
-    #part_one img {
+    #fears__aside-right_part_one img {
         height: 257px;
     }
 
-    #part_tree,
-    #part_four {
+    #fears__aside-right_part_tree,
+    #fears__aside-right_part_four {
         height: 282px;
     }
 
