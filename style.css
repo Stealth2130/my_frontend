@@ -2,7 +2,6 @@
 
 html {
     margin: 0 auto;
-    /*    background-color: #EFF5FB;*/
     max-width: 1440px;
 }
 
@@ -45,8 +44,6 @@ header {
     text-decoration: none;
 }
 
-
-
 .header__button {
     position: absolute;
     right: 0;
@@ -65,20 +62,11 @@ header {
 .header__hamburger_menu-line {
     width: 30px;
     height: 3px;
-    background-color: white;
+    background-color: #03B2A5;
     margin: 5px;
 }
 
-/*Медиа запрос для мобильные устройств*/
-@media (max-width: 768px) {
-    .header__hamburger-menu {
-        display: block;
-    }
 
-    .header__menu {
-        display: none;
-    }
-}
 
 /*Настройка для шапки и секций*/
 .menu {
@@ -129,8 +117,7 @@ h4 {
     padding: 0px;
     column-gap: 8px;
     text-align: center;
-    line-height:
-        /*
+    /*
     overflow-x: auto;
   overflow-y: hidden;
 */
@@ -140,9 +127,10 @@ h4 {
     display: flex;
     align-items: center;
     border: 1px solid #C1C5CD;
-
+    height: 1em;
     border-radius: 24px;
     padding: 6px 8px;
+    margin-bottom: 8px;
 }
 
 /*Настройка для статьи*/
@@ -154,13 +142,14 @@ h4 {
 */
 
 .articles__section-one {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2, 588px);
     column-gap: 24px;
 }
 
 .articles__section-two {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(3, 384px);
     column-gap: 24px;
 }
 
@@ -168,8 +157,6 @@ h4 {
     box-sizing: border-box;
     position: relative;
     border: 1px solid #DEDEDE;
-    width: 588px;
-    height: 499px;
     border-radius: 30px;
     box-sizing: border-box;
     background-color: #FFFFFF;
@@ -180,8 +167,6 @@ h4 {
     box-sizing: border-box;
     position: relative;
     border: 1px solid #DEDEDE;
-    width: 384px;
-    height: 475px;
     border-radius: 30px;
     box-sizing: border-box;
     background-color: #FFFFFF;
@@ -189,7 +174,6 @@ h4 {
 }
 
 .article__picture {
-    height: 260px;
     width: 100%;
     object-fit: cover;
     object-position: bottom;
@@ -218,29 +202,6 @@ h4 {
     font-size: 14px;
     font-weight: 600;
 }
-
-/*
-.article__tags ul {
-    display: inline-flex;
-    flex-direction: column;
-    position: absolute;
-    z-index: 3;
-    padding: 8px;
-    margin: 0;
-}
-
-.article__tags ul li {
-    display: inline-flex;
-    display: inline-block;
-    list-style: none;
-    border: 1px solid #C1C5CD;
-    background-color: rgba(255, 255, 255, 0.5);
-    border-radius: 24px;
-    padding: 6px 8px;
-    font-size: 14px;
-    font-weight: 600;
-
-}*/
 
 .smile {
     height: 1rem;
@@ -284,8 +245,9 @@ footer {
 
 .footer__section-one {
     display: flex;
+    flex-wrap: wrap;
     padding: 0;
-    justify-content: space-between
+    justify-content: space-between;
 }
 
 .footer__menu ul {
@@ -296,6 +258,7 @@ footer {
     font-weight: bold;
     padding: 0;
     margin: 0;
+
 }
 
 .footer__menu li {
@@ -308,7 +271,7 @@ footer {
 }
 
 .footer__subscription {
-    width: 486px;
+    width: 450px;
 }
 
 .footer__subscription-text {
@@ -376,7 +339,7 @@ footer {
 
 .footer__hr {
     border-color: rgba(255, 255, 255, 0.3);
-    width: 1200px;
+    width: 100%;
     margin-top: 26px;
     margin-bottom: 16px;
 }
@@ -431,12 +394,6 @@ footer {
     font-weight: 500;
 }
 
-#fears__aside-right {
-    grid-column: 2;
-    grid-row: 2;
-    font-size: 14px;
-}
-
 #fears__aside-bottom {
     grid-column: 1 / 3;
     grid-row: 3;
@@ -447,8 +404,6 @@ footer {
     width: 100%;
     max-height: 331px;
     object-fit: cover;
-    object-position: ;
-
 }
 
 #subhead li {
@@ -488,11 +443,11 @@ footer {
     padding-top: 8px;
 }
 
-.fears__photo_two {
+.fears__photo-two {
     margin: 0;
 }
 
-.fears__photo_two figcaption {
+.fears__photo-two figcaption {
     color: #868686;
     padding-top: 16px;
     font-size: 14px;
@@ -515,13 +470,19 @@ footer {
 .fears__text-in-vector img {
     position: absolute;
     top: 0;
-    left: 225px;
+    left: 25%;
 }
 
-#fears__photo_tree {
+#fears__photo-tree {
     display: flex;
     column-gap: 24px
 }
+
+#fears__photo-tree img {
+    height: 380px;
+    object-fit: cover;
+}
+
 
 .exersice {
     background-color: #FEFAEC;
@@ -584,15 +545,33 @@ footer {
 }
 
 .btn {
+    padding: 20px 24px;
+}
+
+.btn,
+.aside-right__btn {
     background-color: #16C8BB;
     border: none;
     border-radius: 4px;
     color: white;
-    padding: 20px 24px;
     font-size: 16px;
     font-weight: bold;
 }
 
+.aside-right__btn {
+    padding: 12px auto;
+    height: 48px;
+}
+
+#fears__aside-right {
+    grid-column: 2;
+    grid-row: 2;
+    font-size: 14px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    grid-gap: 26px;
+}
 
 #part_one {
     box-sizing: border-box;
@@ -610,16 +589,17 @@ footer {
     font-size: 18px;
     font-weight: bold;
     padding: 0;
+    margin: 0;
 }
 
 #part_two {
+    box-sizing: border-box;
     position: relative;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     border: 1px solid #DEDEDE;
     border-radius: 16px;
-    margin: 25px 0;
     padding: 24px 16px 36px;
     height: 481px;
 }
@@ -698,27 +678,27 @@ footer {
 
 #part_tree {
     background-image: url(images/gifts.png);
-    background-size: contain;
-    width: 282px;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
     height: 292px;
     color: white;
     font-size: 32px;
     position: relative;
+    display: flex;
+    justify-content: center;
+    border-radius: 16px;
 }
 
 #part_tree p {
     position: absolute;
-    margin: 60px 25px;
-    text-align: center;
-    max-width: 234px;
+    top: 60px max-width: 234px;
 }
 
 #part_four {
     box-sizing: border-box;
-    margin-top: 24px;
     padding: 32px;
     height: 304px;
-    width: 282px;
     border: 1px solid #DEDEDE;
     border-radius: 24px;
     position: relative;
@@ -739,7 +719,7 @@ footer {
 #part_four__p {
     font-size: 14px;
     margin: 16px 0;
-    width: 196px;
+    width: 75%;
 }
 
 #part_four__price {
@@ -748,5 +728,253 @@ footer {
     margin: 16px 0;
 }
 
+@media (max-width: 1199px) {
+    .fears__tags {
+        display: none;
+    }
+
+    #fears__aside-bottom {
+        display: none;
+    }
+}
 
 
+@media (min-width: 992px) and (max-width: 1199px) {
+    body {
+        margin: 0 32px;
+    }
+
+    .articles__section-one {
+        grid-template-columns: repeat(2, 468px);
+        column-gap: 24px;
+    }
+
+    .articles__section-two {
+        grid-template-columns: repeat(3, 304px);
+        grid-template-rows: repeat(2, 458px);
+        column-gap: 24px;
+    }
+
+    footer {
+        padding: 40px 32px 17px;
+        margin: 0 -32px;
+    }
+
+    .footer__menu ul {
+        column-gap: 30px;
+    }
+
+}
+
+@media (max-width: 991px) {
+
+    #fears__main-article {
+        margin-right: 0;
+    }
+
+    #fears__aside-right {
+        margin: 56px 0;
+        grid-row: 4;
+        grid-column: 1;
+        display: grid;
+    }
+
+    .header__hamburger_menu {
+        display: block;
+        position: absolute;
+        right: 0;
+    }
+
+    .header__button {
+        display: none;
+
+    }
+
+    .header__menu {
+        display: none;
+    }
+
+
+
+
+    #part_two,
+    #part_one {
+        height: 471px;
+        padding-bottom: 14px;
+    }
+
+    #part_one img {
+        height: 257px;
+    }
+
+    #part_tree,
+    #part_four {
+        height: 282px;
+    }
+
+}
+
+@media (min-width: 767px) and (max-width: 991px) {
+
+    /* Большие планшеты или небольшие лэптопы */
+    body {
+        margin: 0 20px;
+    }
+
+    .articles__section-one {
+        grid-template-columns: 728px;
+        column-gap: 24px;
+    }
+
+    .articles__section-two {
+        grid-template-columns: repeat(2, 352px);
+        grid-template-rows: repeat(3, 446px);
+        column-gap: 24px;
+    }
+
+    #fears__aside-right {
+        display: grid;
+        grid-template-columns: repeat(2, 356px);
+    }
+
+    footer {
+        padding: 40px 20px 17px;
+        margin: 0 -20px;
+    }
+
+    .footer__menu ul {
+        column-gap: 30px;
+    }
+
+    .article__picture.one {
+        height: 260px;
+    }
+
+    .article__picture.two {
+        height: 206px;
+    }
+
+    .tags ul {
+        flex-wrap: wrap;
+        column-gap: 8px;
+    }
+
+    .footer__menu ul {
+        margin-bottom: 20px;
+    }
+
+    .fears__main {
+        display: grid;
+        grid-template-columns: 728px;
+        /*    grid-template-rows: 1em auto auto;*/
+    }
+
+
+}
+
+@media (max-width: 479px) {
+
+    .tags ul {
+        overflow-x: auto;
+        overflow-y: hidden;
+    }
+
+    /*Тэги, где есть смайл - вылазят за границу. Как исправить?*/
+
+    .tags ul li span {
+        white-space: nowrap;
+    }
+
+    .article__picture {
+        height: 206px;
+    }
+
+    .articles__section-one,
+    .articles__section-two {
+        grid-template-columns: 1fr;
+    }
+
+    .hidden {
+        display: none;
+    }
+
+    .footer__section-two p {
+        margin: 10px 0px;
+    }
+
+    .fears__main {
+        display: grid;
+        grid-template-columns: 1fr;
+        /*    grid-template-rows: 1em auto auto;*/
+    }
+
+    .fears__text-in-vector p {
+        padding: 24px 0 48px !important;
+    }
+
+    #fears__photo-tree,
+    #fears__photo-four {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .fears__two-colums {
+        column-count: 1;
+    }
+    
+/*    Не знаю, как сделать троеточие в меню*/
+    .menu p {
+    
+    }
+    
+
+
+}
+
+
+@media (min-width: 320px) and (max-width: 479px) {
+
+    /* Смартфоны */
+    body {
+        margin: 0 20px;
+    }
+
+    .footer__menu ul {
+        column-gap: 158px;
+        padding-bottom: 23px;
+    }
+
+    .footer__section-two {
+        flex-direction: column;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+
+
+
+
+}
+
+@media (max-width: 320px) {
+
+    /* Самые маленькие разрешения экранов на смартфонах */
+    body {
+        margin: 0 16px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    .footer__menu ul {
+        column-gap: 71px;
+        padding-bottom: 23px;
+    }
+
+    .email button {
+        display: none;
+    }
+
+}
