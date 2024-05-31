@@ -1,0 +1,68 @@
+html {
+  font-size: 30px;
+}
+
+.head {
+  font-size: 24px;
+  display: flex;
+  width: 700px;
+  margin: 10px;
+  justify-content: space-between;
+  gap: 5px;
+  box-sizing: border-box;
+}
+
+button {
+  font-size: 24px;
+  background-color: rgb(137, 188, 247);
+  border: none;
+  flex-grow: 1;
+  padding: 10px 0;
+  cursor: pointer;
+}
+
+#input {
+  font-size: 24px;
+  flex-grow: 2;
+  color: gray;
+  border: 1px solid rgb(137, 188, 247);
+}
+
+#input:focus {
+  outline: none;
+  border: 1px solid rgb(44, 137, 243);
+}
+
+#chat {
+  display: flex;
+  /* flex-flow: column wrap; */
+  flex-direction: column;
+  width: 700px;
+  height: 700px;
+  font-size: 30px;
+  border: 1px solid rgb(137, 188, 247);
+  position: relative;
+  margin: 10px;
+  overflow: auto;
+  box-sizing: border-box;
+}
+
+#chat div {
+  border: 1px solid rgb(137, 188, 247);
+  border-radius: 15px;
+  padding: 10px 20px;
+  margin: 5px 15px;
+}
+
+.sender {
+  align-self: end;
+}
+
+.server {
+  align-self: start;
+}
+
+a {
+  color: blue;
+  text-decoration: none;
+}
