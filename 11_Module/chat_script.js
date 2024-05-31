@@ -29,6 +29,7 @@ send.addEventListener("click", () => {
     geolocation.style.display = "block";
     writeToScreenSender(message);
     websocket.send(message);
+    input.value = ""
   }
 });
 
