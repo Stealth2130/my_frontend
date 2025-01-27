@@ -1,305 +1,423 @@
 <!DOCTYPE html>
 <html lang="ru">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Youtalk - Blog</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
-</head>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<body>
+  <body>
     <header class="header">
-        <div class="header__logo">
-            <img src="images/logo.svg" alt="logo">
-        </div>
-        <nav class="header__menu">
-            <ul>
-                <li><a href="#">О нас</a></li>
-                <li><a href="#">Тарифы</a></li>
-                <li><a href="#">Для бизнеса</a></li>
-                <li><a href="#">Психологам</a></li>
-                <li><a href="#">Сертификат</a></li>
-                <li><a href="#">Материалы</a>
-                    <img src="images/Vector.svg" alt="vector">
-                </li>
-                <li><a href="#">FAQ</a></li>
-            </ul>
-        </nav>
-        <button class="header__button">Подобрать психолога</button>
-        <div class="header__hamburger_menu">
-            <div class="header__hamburger_menu-line"></div>
-            <div class="header__hamburger_menu-line"></div>
-            <div class="header__hamburger_menu-line"></div>
-        </div>
+      <div class="header__logo">
+        <img src="images/logo.svg" alt="logo" />
+      </div>
+      <nav class="header__menu">
+        <ul>
+          <li><a href="#">О нас</a></li>
+          <li><a href="#">Тарифы</a></li>
+          <li><a href="#">Для бизнеса</a></li>
+          <li><a href="#">Психологам</a></li>
+          <li><a href="#">Сертификат</a></li>
+          <li>
+            <a href="#">Материалы </a>
+            <button><img src="images/Vector.svg" alt="vector" /></button>
+          </li>
+          <li><a href="#">FAQ</a></li>
+        </ul>
+      </nav>
+      <button class="header__button">Подобрать психолога</button>
+      <div class="header__hamburger_menu">
+        <div class="header__hamburger_menu-line"></div>
+        <div class="header__hamburger_menu-line"></div>
+        <div class="header__hamburger_menu-line"></div>
+      </div>
     </header>
     <main>
-
-        <!--Как назвать класс первой этой части?-->
-        <article class="menu">
-            <p class="">Главная</p>
-            <!--Не знаю, как сделать стрелку, пока просто символом поставила. Ведь она должна будет скрываться.-->
-            <p>&#62; Блог</p>
-        </article>
-        <article>
-            <h1>Блог!</h1>
-            <!--        Надо ли у ul и li писать класс, если я могу поставить селектор '.tags ul'?-->
-            <section class="tags">
+      <article class="menu">
+        <p class="">Главная</p>
+        <!--Не знаю, как сделать стрелку, пока просто символом поставила. Ведь она должна будет скрываться.-->
+        <p>&#62; Блог</p>
+      </article>
+      <article>
+        <h1>Блог</h1>
+        <!--        Надо ли у ul и li писать класс, если я могу поставить селектор '.tags ul'?-->
+        <section class="tags">
+          <ul>
+            <!--Не хватает информации в ТЗ, но по логике Единороги указаны там, где "текущий тег". Мне сейчас их нужно вставлять и если да, то как проставлять? Это же не статичные картинки. Их место поидее будет меняться-->
+            <li>
+              <img class="smile" src="images/smile.png" alt="Смайлик" />
+              <a href="#">Все</a>
+            </li>
+            <li><a href="#">Самооценка и самопринятие</a></li>
+            <li>
+              <img
+                class="smile"
+                src="images/unicorn.png"
+                alt="Смайл единорога"
+              />
+              <a href="#">Self</a>
+            </li>
+            <li><a href="#">Чувcтва и эмоции</a></li>
+            <li><a href="#">Тревога</a></li>
+            <li><a href="#">Упражения</a></li>
+            <li><a href="#">Психология и питание</a></li>
+            <li><a href="#">Насилие</a></li>
+            <li><a href="#">Личное здоровье</a></li>
+          </ul>
+        </section>
+        <section class="articles">
+          <section class="articles__section-one">
+            <!--Тут лучше div или setion еще раз? Провильно ли тут классы расставлены?-->
+            <article class="section-one__article">
+              <div class="article__tags">
                 <ul>
-                    <!--Не хватает информации в ТЗ, но по логике Единороги указаны там, где "текущий тег". Мне сейчас их нужно вставлять и если да, то как проставлять? Это же не статичные картинки. Их место поидее будет меняться-->
-                    <li><img class="smile" src="images/smile.png" alt="Смайлик">
-                        <span>Все</span>
-                    </li>
-                    <li><span>Самооценка и самопринятие</span></li>
-                    <li><img class="smile" src="images/unicorn.png" alt="Смайл единорога">
-                        <span>Self</span>
-                    </li>
-                    <li><span>Чувcтва и эмоции</span></li>
-                    <li><span>Тревога</span></li>
-                    <li><span>Упражения</span></li>
-                    <li><span>Психология и питание</span></li>
-                    <li><span>Насилие</span></li>
-                    <li><span>Личное здоровье</span></li>
+                  <li>
+                    <div class="article__tag">
+                      <img
+                        class="smile"
+                        src="images/unicorn.png"
+                        alt="Смайлик единорога"
+                      />
+                      <span>Самооценка и самопринятие</span>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="article__tag">
+                      <img
+                        class="smile"
+                        src="images/unicorn.png"
+                        alt="Смайлик единорога"
+                      />
+                      <span>Self</span>
+                    </div>
+                  </li>
                 </ul>
-            </section>
-            <section class="articles">
-                <section class="articles__section-one">
-                    <!--Тут лучше div или setion еще раз? Провильно ли тут классы расставлены?-->
-                    <article class="section-one__article">
-                        <div class="article__tags">
-                            <ul>
-                                <li>
-                                    <div class="article__tag">
-                                        <img class="smile" src="images/unicorn.png" alt="Смайлик единорога">
-                                        <span>Самооценка и самопринятие</span>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="article__tag">
-                                        <img class="smile" src="images/unicorn.png" alt="Смайлик единорога">
-                                        <span>Self</span>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
+              </div>
 
-                        <img class="article__picture one" src="images/emotion_one.png" alt="Картинка про эмоции">
-                        <div class="article__text">
-                            <h2>Эмоциональное выгорание - стадии и симптомы, методы восстановления и профилактики</h2>
-                            <p class="author">Автор: Лиза Файнтух</p>
-                            <p>Изначально термин «эмоциональное профессиональной сфере и относился...</p>
-                        </div>
-                        <span class="date">21.08.2021</span>
-                    </article>
-                    <article class="section-one__article">
-                        <div class="article__tags">
-                            <ul>
-                                <li>
-                                    <div class="article__tag">
-                                        <img class="smile" src="images/unicorn.png" alt="Смайлик единорога">
-                                        <span>Самооценка и самопринятие</span>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="article__tag">
-                                        <img class="smile" src="images/unicorn.png" alt="Смайлик единорога">
-                                        <span>Self</span>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
+              <img
+                class="article__picture one"
+                src="images/emotion_one.png"
+                alt="Картинка про эмоции"
+              />
+              <div class="article__text">
+                <h2>
+                  Эмоциональное выгорание - стадии и симптомы, методы
+                  восстановления и профилактики
+                </h2>
+                <p class="author">Автор: Лиза Файнтух</p>
+                <p>
+                  Изначально термин «эмоциональное профессиональной сфере и
+                  относился...
+                </p>
+                <p class="date">21.08.2021</p>
+              </div>
+            </article>
+            <article class="section-one__article">
+              <div class="article__tags">
+                <ul>
+                  <li>
+                    <div class="article__tag">
+                      <img
+                        class="smile"
+                        src="images/unicorn.png"
+                        alt="Смайлик единорога"
+                      />
+                      <span>Самооценка и самопринятие</span>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="article__tag">
+                      <img
+                        class="smile"
+                        src="images/unicorn.png"
+                        alt="Смайлик единорога"
+                      />
+                      <span>Self</span>
+                    </div>
+                  </li>
+                </ul>
+              </div>
 
-                        <img class="article__picture one" src="images/fears_one.png" alt="Девушка бежит по дороге">
-                        <div class="article__text">
-                            <h2><a href="pages/article_fears_lisaF.html">Как не утонуть в тревоге и управлять своими страхами</a></h2>
-                            <p class="author">Автор: Екатерина Бельтюкова</p>
-                            <p>Один из самых важных навыков, которые может дать работа с психотерапевтом - умение в разных ситуациях по-разному обходиться ...</p>
-                        </div>
-                        <span class="date">11.08.2021</span>
-                    </article>
-                </section>
-                <section class="articles__section-two">
-                    <article class="section-two__article">
-                        <div class="article__tags">
-                            <ul>
-                                <li>
-                                    <div class="article__tag">
-                                        <img class="smile" src="images/unicorn.png" alt="Смайлик единорога">
-                                        <span>Самооценка и самопринятие</span>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="article__tag">
-                                        <img class="smile" src="images/unicorn.png" alt="Смайлик единорога">
-                                        <span>Психология питания</span>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
+              <img
+                class="article__picture one"
+                src="images/fears_one.png"
+                alt="Девушка бежит по дороге"
+              />
+              <div class="article__text">
+                <h2>
+                  <a href="pages/article_fears_lisaF.html"
+                    >Как не утонуть в тревоге и управлять своими страхами</a
+                  >
+                </h2>
+                <p class="author">Автор: Екатерина Бельтюкова</p>
+                <p>
+                  Один из самых важных навыков, которые может дать работа с
+                  психотерапевтом - умение в разных ситуациях по-разному
+                  обходиться ...
+                </p>
+                <p class="date">11.08.2021</p>
+              </div>
+            </article>
+          </section>
+          <section class="articles__section-two">
+            <article class="section-two__article">
+              <div class="article__tags">
+                <ul>
+                  <li>
+                    <div class="article__tag">
+                      <img
+                        class="smile"
+                        src="images/unicorn.png"
+                        alt="Смайлик единорога"
+                      />
+                      <span>Самооценка и самопринятие</span>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="article__tag">
+                      <img
+                        class="smile"
+                        src="images/unicorn.png"
+                        alt="Смайлик единорога"
+                      />
+                      <span>Психология питания</span>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <img
+                class="article__picture two"
+                src="images/article-three.png"
+                alt="Девушка лежит уставшая"
+              />
+              <div class="article__text">
+                <h2>
+                  Эмоциональное выгорание – стадии и симптомы, методы
+                  восстановления и профилактики
+                </h2>
+                <p class="author">Автор: Лиза Файнтух</p>
+                <p>
+                  Изначально термин «эмоциональное профессиональной сфере и
+                  относился...
+                </p>
+                <span class="date">21.08.2021</span>
+              </div>
+            </article>
+            <article class="section-two__article">
+              <div class="article__tags">
+                <ul>
+                  <li>
+                    <div class="article__tag">
+                      <img
+                        class="smile"
+                        src="images/unicorn.png"
+                        alt="Смайлик единорога"
+                      />
+                      <span>Self</span>
+                    </div>
+                  </li>
+                </ul>
+              </div>
 
-                        <img class="article__picture two" src="images/article-three.png" alt="Девушка лежит уставшая">
-                        <div class="article__text">
-                            <h2>Эмоциональное выгорание – стадии и симптомы, методы восстановления и профилактики</h2>
-                            <p class="author">Автор: Лиза Файнтух</p>
-                            <p>Изначально термин «эмоциональное профессиональной сфере и относился...</p>
-                        </div>
-                        <span class="date">21.08.2021</span>
-                    </article>
-                    <article class="section-two__article">
-                        <div class="article__tags">
-                            <ul>
-                                <li>
-                                    <div class="article__tag">
-                                        <img class="smile" src="images/unicorn.png" alt="Смайлик единорога">
-                                        <span>Self</span>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
+              <img
+                class="article__picture two"
+                src="images/article-four.png"
+                alt="Девушка плывет на спине"
+              />
+              <div class="article__text">
+                <h2>Как не утонуть в тревоге и управлять своими страхами</h2>
+                <p class="author">Автор: Екатерина Бельтюкова</p>
+                <p>
+                  Один из самых важных навыков, которые может дать работа с
+                  психотерапевтом - умение в разных ситуациях по-разному
+                  обходиться ...
+                </p>
+                <span class="date">11.08.2021</span>
+              </div>
+            </article>
+            <article class="section-two__article hidden">
+              <div class="article__tags">
+                <ul>
+                  <li>
+                    <div class="article__tag">
+                      <img
+                        class="smile"
+                        src="images/unicorn.png"
+                        alt="Смайлик единорога"
+                      />
+                      <span>Self</span>
+                    </div>
+                  </li>
+                </ul>
+              </div>
 
-                        <img class="article__picture two" src="images/article-four.png" alt="Девушка плывет на спине">
-                        <div class="article__text">
-                            <h2>Как не утонуть в тревоге и управлять своими страхами</h2>
-                            <p class="author">Автор: Екатерина Бельтюкова</p>
-                            <p>Один из самых важных навыков, которые может дать работа с психотерапевтом - умение в разных ситуациях по-разному обходиться ...</p>
-                        </div>
-                        <span class="date">11.08.2021</span>
-                    </article>
-                    <article class="section-two__article hidden">
-                        <div class="article__tags">
-                            <ul>
+              <img
+                class="article__picture two"
+                src="images/article-five.png"
+                alt="Плакат с злым лицом"
+              />
+              <div class="article__text">
+                <h2>Как управлять своими эмоциями: 8 шагов</h2>
+                <p class="author">Автор: Екатерина Бельтюкова</p>
+                <p>
+                  Клиенты часто спрашивают, как КОНТРОЛИРОВАТЬ свои негативные
+                  эмоции. Пришло время об этом написать!
+                </p>
+                <span class="date">07.08.2021</span>
+              </div>
+            </article>
+            <article class="section-two__article hidden">
+              <div class="article__tags">
+                <ul>
+                  <li>
+                    <div class="article__tag">
+                      <img
+                        class="smile"
+                        src="images/unicorn.png"
+                        alt="Смайлик единорога"
+                      />
+                      <span>Self</span>
+                    </div>
+                  </li>
+                </ul>
+              </div>
 
-                                <li>
-                                    <div class="article__tag">
-                                        <img class="smile" src="images/unicorn.png" alt="Смайлик единорога">
-                                        <span>Self</span>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
+              <img
+                class="article__picture two"
+                src="images/article-six.png"
+                alt="Женщина работает за ноутбуком"
+              />
+              <div class="article__text">
+                <h2>
+                  Эмоциональное выгорание – стадии и симптомы, методы
+                  восстановления и профилактики
+                </h2>
+                <p class="author">Автор: Лиза Файнтух</p>
+                <p>Изначально термин «эмоциональное я...</p>
+                <span class="date">21.08.2021</span>
+              </div>
+            </article>
+            <article class="section-two__article hidden">
+              <div class="article__tags">
+                <ul>
+                  <li>
+                    <div class="article__tag">
+                      <img
+                        class="smile"
+                        src="images/unicorn.png"
+                        alt="Смайлик единорога"
+                      />
+                      <span>Self</span>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <img
+                class="article__picture two"
+                src="images/article-seven.png"
+                alt="Женщина рабостно общается по видеосвязи"
+              />
+              <div class="article__text">
+                <h2>Как не утонуть в тревоге и управлять своими страхами</h2>
+                <p class="author">Автор: Екатерина Бельтюкова</p>
+                <p>
+                  Один из самых важных навыков, которые может дать работа с
+                  психотерапевтом - умение в разных ситуациях по-разному
+                  обходиться ...
+                </p>
+                <span class="date">11.08.2021</span>
+              </div>
+            </article>
+            <article class="section-two__article">
+              <div class="article__tags">
+                <ul>
+                  <li>
+                    <div class="article__tag">
+                      <img
+                        class="smile"
+                        src="images/unicorn.png"
+                        alt="Смайлик единорога"
+                      />
+                      <span>Self</span>
+                    </div>
+                  </li>
+                </ul>
+              </div>
 
-                        <img class="article__picture two" src="images/article-five.png" alt="Плакат с злым лицом">
-                        <div class="article__text">
-                            <h2>Как управлять своими эмоциями: 8 шагов</h2>
-                            <p class="author">Автор: Екатерина Бельтюкова</p>
-                            <p>Клиенты часто спрашивают, как КОНТРОЛИРОВАТЬ свои негативные эмоции. Пришло время об этом написать!</p>
-                        </div>
-                        <span class="date">07.08.2021</span>
-                    </article>
-                    <article class="section-two__article hidden">
-                        <div class="article__tags">
-                            <ul>
-                                <li>
-                                    <div class="article__tag">
-                                        <img class="smile" src="images/unicorn.png" alt="Смайлик единорога">
-                                        <span>Self</span>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
+              <img
+                class="article__picture two"
+                src="images/article-eight.png"
+                alt="Двое мужчин пересеклись в холле"
+              />
+              <div class="article__text">
+                <h2>Как управлять своими эмоциями: 8 шагов</h2>
+                <p class="author">Автор: Екатерина Бельтюкова</p>
+                <p>
+                  Клиенты часто спрашивают, как КОНТРОЛИРОВАТЬ свои негативные
+                  эмоции. Пришло время об этом написать!
+                </p>
+                <span class="date">07.08.2021</span>
+              </div>
+            </article>
+          </section>
+        </section>
 
-                        <img class="article__picture two" src="images/article-six.png" alt="Женщина работает за ноутбуком">
-                        <div class="article__text">
-                            <h2>Эмоциональное выгорание – стадии и симптомы, методы восстановления и профилактики</h2>
-                            <p class="author">Автор: Лиза Файнтух</p>
-                            <p>Изначально термин «эмоциональное я...</p>
-                        </div>
-                        <span class="date">21.08.2021</span>
-                    </article>
-                    <article class="section-two__article hidden">
-                        <div class="article__tags">
-                            <ul>
-                                <li>
-                                    <div class="article__tag">
-                                        <img class="smile" src="images/unicorn.png" alt="Смайлик единорога">
-                                        <span>Self</span>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                        <img class="article__picture two" src="images/article-seven.png" alt="Женщина рабостно общается по видеосвязи">
-                        <div class="article__text">
-                            <h2>Как не утонуть в тревоге и управлять своими страхами</h2>
-                            <p class="author">Автор: Екатерина Бельтюкова</p>
-                            <p>Один из самых важных навыков, которые может дать работа с психотерапевтом - умение в разных ситуациях по-разному обходиться ...</p>
-                        </div>
-                        <span class="date">11.08.2021</span>
-                    </article>
-                    <article class="section-two__article hidden">
-                        <div class="article__tags">
-                            <ul>
-                                <li>
-                                    <div class="article__tag">
-                                        <img class="smile" src="images/unicorn.png" alt="Смайлик единорога">
-                                        <span>Self</span>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-
-                        <img class="article__picture two" src="images/article-eight.png" alt="Двое мужчин пересеклись в холле">
-                        <div class="article__text">
-                            <h2>Как управлять своими эмоциями: 8 шагов</h2>
-                            <p class="author">Автор: Екатерина Бельтюкова</p>
-                            <p>Клиенты часто спрашивают, как КОНТРОЛИРОВАТЬ свои негативные эмоции. Пришло время об этом написать!</p>
-                        </div>
-                        <span class="date">07.08.2021</span>
-                    </article>
-                </section>
-            </section>
-
-            <section class="button-else">
-                <button>Ещё</button>
-            </section>
-        </article>
-
+        <section class="button-else">
+          <button>Ещё</button>
+        </section>
+      </article>
     </main>
     <footer>
-        <!--      Пока не понимаю, где использовать section, а где div?-->
-        <section class="footer__section-one">
-            <section class="footer__menu">
-                <nav>
-                    <ul>
-                        <li><a href="#">О нас</a></li>
-                        <li><a href="#">Тарифы</a></li>
-                        <li><a href="#">Для бизнеса</a></li>
-                        <li><a href="#">Психологам</a></li>
-                        <li><a href="#">FAQ</a></li>
-                        <li><a href="#">Блог</a></li>
-                        <li><a href="#">Вебинары</a></li>
-                        <li><a href="#">Подкаст</a></li>
-                        <li><a href="#">Сертификат</a></li>
-                        <li><a href="#">Контакты</a></li>
-                    </ul>
-                </nav>
-            </section>
-            <section class="footer__subscription">
-                <p class="footer__subscription-text">Одно письмо в неделю со свежими новостями и акциями</p>
-                <div class="email">
-                    <input id="email" type="email" placeholder="Ваш e-mail">
-                    <button></button>
-                </div>
-                <p class="footer__subscription-personal">Подписываясь, я соглашаюсь на обработку персональных данных в соответствии с ФЗ РФ № 152-ФЗ «О персональных данных», а также с Политикой конфиденциальности</p>
-            </section>
-            <section class="footer__icons">
-                <div class="footer__icons-sk">
-                    <img src="images/SK.svg" alt="Участник программы сколково">
-                </div>
-                <div class="footer__icons-social">
-                    <img src="images/vk.svg" alt="Иконка Вконтакте">
-                    <img src="images/tg.svg" alt="Иконка Телеграмм">
-                    <img src="images/tvit.svg" alt="Иконка Твиттер">
-                    <img src="images/dzen.svg" alt="Иконка Дзен">
-                </div>
-            </section>
+      <section class="footer__section-one">
+        <section class="footer__menu">
+          <nav>
+            <ul>
+              <li><a href="#">О нас</a></li>
+              <li><a href="#">Тарифы</a></li>
+              <li><a href="#">Для бизнеса</a></li>
+              <li><a href="#">Психологам</a></li>
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">Блог</a></li>
+              <li><a href="#">Вебинары</a></li>
+              <li><a href="#">Подкаст</a></li>
+              <li><a href="#">Сертификат</a></li>
+              <li><a href="#">Контакты</a></li>
+            </ul>
+          </nav>
         </section>
-        <hr class="footer__hr">
-        <section class="footer__section-two">
-            <p>&#169;Youtalk, 2018 – 2022</p>
-            <p>Юридические документы</p>
-            <p>Способы оплаты</p>
+        <section class="footer__subscription">
+          <p class="footer__subscription-text">
+            Одно письмо в неделю со свежими новостями и акциями
+          </p>
+          <div class="email">
+            <input id="email" type="email" placeholder="Ваш e-mail" />
+            <button></button>
+          </div>
+          <p class="footer__subscription-personal">
+            Подписываясь, я соглашаюсь на обработку персональных данных в
+            соответствии с ФЗ РФ № 152-ФЗ «О персональных данных», а также с
+            Политикой конфиденциальности
+          </p>
         </section>
+        <section class="footer__icons">
+          <div class="footer__icons-sk">
+            <img src="images/SK.svg" alt="Участник программы сколково" />
+          </div>
+          <div class="footer__icons-social">
+            <a href="#"><img src="images/vk.svg" alt="Иконка Вконтакте" /></a>
+            <a href="#"><img src="images/tg.svg" alt="Иконка Телеграмм" /></a>
+            <a href="#"><img src="images/tvit.svg" alt="Иконка Твиттер" /></a>
+            <a href="#"> <img src="images/dzen.svg" alt="Иконка Дзен" /></a>
+          </div>
+        </section>
+      </section>
+      <hr class="footer__hr" />
+      <section class="footer__section-two">
+        <p>&#169;Youtalk, 2018 – 2022</p>
+        <p>Юридические документы</p>
+        <p>Способы оплаты</p>
+      </section>
     </footer>
-
-</body></html>
+  </body>
+</html>
